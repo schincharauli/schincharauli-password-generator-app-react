@@ -1,0 +1,97 @@
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700&display=swap');
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.App{
+  width: 100vw;
+  height: 100vh;
+  /* background-color:#08070B; */
+  font-family: 'JetBrains Mono', monospace;
+}
+
+.generator{
+  display: flex;  
+  flex-direction: column;
+  padding-left: 16px;
+  padding-right: 16px;
+  align-items: center;
+}
+
+.card{
+  justify-content: center;
+  background-color: #24232C;
+  padding-top: 16px;
+}
+
+h1{
+  color: #817D92;
+  font-size: 16px;
+  align-items: center;
+  margin-top: 64px;
+}
+
+.output{
+  height: 64px;
+  width: 343px;
+  background-color: #24232C;
+  margin-top: 16px;
+  display: flex;
+  justify-content: space-between;
+  padding: 18px;
+
+
+}
+
+.input-card{
+  padding: 16px;
+  height: 423px;
+  width: 343px;
+  background-color: #24232C;
+  margin-top: 16px;
+
+}
+
+.range-titles{
+  display: flex;
+  justify-content: space-between;
+}
+
+.input-card p{
+  font-size: 16px;
+  color: #E6E5EA;
+  font-weight: 700;
+}
+
+.range-titles >span{
+  color: #A4FFAF;
+
+}
+
+.input-card input{
+  width: 311px;
+  margin-top: 23px;
+  color: #08070B;
+}
+
+.range{
+ accent-color: #A4FFAF;
+
+ border: none;
+}
+
+.checkbox-wrapper{
+  height: 20px;
+  width: 20px;
+  left: 0px;
+  top: 1px;
+  border-radius: 0px;
+
+}
+
+.checkbox-wrapper input{
+  color: #A4FFAF;
+}
+
+
