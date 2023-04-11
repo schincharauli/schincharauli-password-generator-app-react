@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import reactLogo from "./assets/react.svg";
 import viteLogo from "/vite.svg";
 
@@ -13,10 +13,23 @@ import {
 
 function App() {
   const [data, setData] = useState(0);
+  const [weakness, setWeakness] = useState("too weak!");
+
+  useEffect(() => {
+    if (data < 5) {
+      setWeakness("too weak!");
+    } else if (data < 10) {
+      setWeakness("weak");
+    } else if (data < 12) {
+      setWeakness("medium");
+    } else if (data < 20) {
+      setWeakness("strong");
+    }
+  }, [data]);
 
   const [password, setPassword] = useState("");
 
-  const [passwordLength, setPasswordLength] = useState(20);
+  const [passwordLength, setPasswordLength] = useState('');
   const [includeUppercase, setIncludeUppercase] = useState(false);
   const [includeLowercase, setIncludeLowercase] = useState(false);
   const [includeNumbers, setIncludeNumbers] = useState(false);
@@ -36,7 +49,6 @@ function App() {
     if (includeSymbols) {
       characterList = characterList + specialCharacters;
     }
-
     setPassword(createPassword(characterList));
   };
 
@@ -52,12 +64,7 @@ function App() {
   };
 
   const copytoFun = () => {
-    let newTextArea = document.createElement("textarea");
-    newTextArea = innerText = password;
-    document.body.appendChild(newTextArea);
-    newTextArea.select();
-    document.execComand("copy");
-    newTextArea.remove();
+ 
   };
   const handleCopyPassword = (e) => {
     copytoFun();
@@ -83,7 +90,7 @@ function App() {
 
           <div className="output-container">
             <label className="sliderLabel" for="slider">
-              Character Length{" "}
+              Character Length{""}
               <span className="sliderValue" id="sliderValue">
                 <p>{data}</p>
               </span>
@@ -155,16 +162,48 @@ function App() {
               </label>
             </div>
 
-            <div className="strength flex">
+            <div className="strength">
               <h2 className="">Strength</h2>
               <div className="strengthLvl">
-                <p className="" id="levelTxt">
-                  weak
+                <p id="levelTxt">
+                  {weakness}
                 </p>
-                <div id="bar1" class="bars bar1"></div>
-                <div id="bar2" class="bars bar2"></div>
-                <div id="bar3" class="bars bar3"></div>
-                <div id="bar4" class="bars bar4"></div>
+
+                <div
+                  id="bar1"
+                  className={ 
+                 `bars ${weakness === "too weak!"
+                      ? "tooWeak"
+                      : weakness === "weak"
+                      ? "weak"
+                      : weakness === "medium"
+                      ? "medium"
+                      : "strong" } `
+                  }
+                ></div>
+                <div
+                  id="bar2"
+                  className={
+                  ` bars  bar2 ${ weakness === "weak"
+                  ? "weak"
+                  : weakness === "medium"
+                  ? "medium"
+                  : weakness === "strong" ? "strong" : "" } `
+                  }
+                ></div>
+                <div
+                  id="bar3"
+                  className={
+                    ` bars bar3  ${ weakness === "medium" ? "medium" : weakness === "strong" ? "strong" : "" }`
+                  
+                  }
+                ></div>
+
+                <div
+                  id="bar4"
+                  className={
+                   ` bars  bar4 ${weakness === "strong" ? "strong": "" } ` }
+                ></div>
               </div>
             </div>
 

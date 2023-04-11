@@ -123,7 +123,9 @@ body {
 }
 
 
-
+.fieldText{
+  font-size: 16px;
+}
 
 input[type="checkbox"]{
   appearance: none;
@@ -179,11 +181,13 @@ justify-content: flex-start;
   text-transform: uppercase;
   font-size: var(--fs-2);
   line-height: 1.485rem;
+  
 }
 
 .strength h2{
   font-size: var(--fs-3);
   line-height: 1.32rem;
+  
 }
 
 .strengthLvl {
@@ -198,34 +202,7 @@ justify-content: flex-start;
 
 
 
-input[type="range"] {
-  -webkit-appearance: none;
-  background: hsl(var(--clr-veryDarkGrey));
-  accent-color: white;
-  cursor: pointer;
-  height: 8px;
-  background-image: linear-gradient(
-    hsl(var(--clr-neonGreen)),
-    hsl(var(--clr-neonGreen))
-  );
-  background-size: 30% 100%;
-  background-repeat: no-repeat;
-  display: block;
-}
 
-input[type="range"]::-webkit-slider-thumb {
-  height: 28px;
-  width: 28px;
-  background: hsl(var(--clr-almostWhite));
-  -webkit-appearance: none;
-  border-radius: 14px;
-}
-
-input[type="range"]:hover::-webkit-slider-thumb {
-  background: hsl(var(--clr-veryDarkGrey));
-  border: 2px solid hsl(var(--clr-neonGreen));
-  -webkit-appearance: none;
-}
 
 
 .checkboxes {
@@ -244,6 +221,17 @@ input[type="range"]:hover::-webkit-slider-thumb {
   border: 2px solid hsl(var(--clr-almostWhite));
   margin-left: 0.5rem;
 }
+
+#bar1,
+#bar2,
+#bar3,
+#bar4{
+  width: 10px;
+  height: 28px;
+  margin-left: 0.5rem;
+}
+
+
 
 .button {
   width: 100%;
@@ -277,6 +265,7 @@ input[type="range"]:hover::-webkit-slider-thumb {
 .tooWeak {
   background-color: hsl(var(--clr-red));
   border: 2px solid hsl(var(--clr-red));
+
 }
 
 .weak {
