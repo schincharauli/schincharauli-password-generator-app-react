@@ -103,7 +103,7 @@ function App() {
               }}
               id="passwordStrength"
               name="password-strength"
-              className="slider"
+              className="slide"
               type="range"
               min="0"
               max="20"
@@ -207,9 +207,12 @@ function App() {
               </div>
             </div>
 
+            <div className="generate">
             <button onClick={handleGeneratePassword} className="generator-btn">
-              Generate Password
+              Generate 
             </button>
+            
+            </div>
           </div>
         </div>
       </div>
