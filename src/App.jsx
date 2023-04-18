@@ -83,7 +83,8 @@ function App() {
           <h2 className="generator-header">Password Generator</h2>
           <div className="generator-password">
             <h3 className="fieldText"> {password}</h3>
-            <p className="copied-comment">{showElement && <p>COPIED</p>}</p>
+          <div className="copies">
+               <p className="copied-comment">{showElement && <p>COPIED</p>}</p>
             <button onClick={handleCopyPassword} className="copy-btn">
               <svg width="21" height="24" xmlns="http://www.w3.org/2000/svg">
                 <path
@@ -93,6 +94,7 @@ function App() {
                 />
               </svg>
             </button>
+          </div>
           </div>
 
           <div className="output-container">
