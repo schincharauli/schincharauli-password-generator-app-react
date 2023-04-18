@@ -36,7 +36,7 @@ body {
   margin-inline: 16px;
   max-width: 540px;
   margin: 120px auto;
-  padding-left:16px;
+  padding-left: 16px;
   padding-right: 16px;
 }
 
@@ -117,8 +117,6 @@ body {
   margin-top: 1rem;
   margin-bottom: 2rem;
 }
-
-
 
 input[type="checkbox"] {
   appearance: none;
@@ -287,24 +285,23 @@ input[type="checkbox"]:checked::after {
   margin-left: 10px;
 }
 
-.copied-comment{
+.copied-comment {
   font-size: 16px;
   color: hsl(var(--clr-neonGreen));
   margin-left: 50px;
 }
-.copies{
+.copies {
   display: flex;
   gap: 10px;
 }
 
-@media (min-width: 768px){
-  .App{
+@media (min-width: 768px) {
+  .App {
     max-width: 540px;
     margin: 120px auto;
   }
 
-  .fieldText{
+  .fieldText {
     font-size: 28px;
   }
-
 }
